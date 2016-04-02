@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_land"
+    tools:context=".MainActivity"
+    android:id="@+id/layout"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWelcome"
+            android:layout_alignBottom="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:textColor="#fff"
+            android:layout_weight="0.37"
+            android:textSize="16dp"
+            android:layout_marginLeft="15dp" />
+
+        <Button
+            android:layout_width="177dp"
+            android:layout_height="40dp"
+            android:text="Logout"
+            android:id="@+id/btnLogout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="#91ffffff"
+            android:textColor="#000"
+            android:layout_margin="2dp"
+            android:layout_weight="0.19" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:weightSum="1"
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/text_search_box"
+            android:layout_width="380dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="#fff"
+            android:autoText="true"
+            android:layout_below="@+id/btnLogout"
+            android:layout_alignParentStart="true"
+            android:layout_margin="2dp"
+            android:layout_weight="0.64" />
+
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:id="@+id/search"
+            android:layout_gravity="right"
+            android:layout_below="@+id/text_search_box"
+            android:layout_alignStart="@+id/tvWelcome"
+            android:text="@string/searchbox"
+            android:textColor="#000"
+            android:background="#91ffffff"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="438dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:textColor="#fff7fff9"
+        android:textSize="16dp"
+        android:layout_toStartOf="@+id/tvWelcome"
+        android:layout_alignEnd="@+id/btnLogout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="3dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratetext"
+                android:textColor="#fff7fff9"
+                android:textSize="16dp"
+                android:layout_toStartOf="@+id/tvWelcome"
+                android:layout_alignEnd="@+id/btnLogout"
+                android:text="@string/foodrating"
+                android:layout_marginBottom="3dp" />
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="10"
+                android:stepSize="1"
+                android:rating="0"
+                android:id="@+id/pop_ratingbar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:clickable="true"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="196dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ingre"
+                android:textColor="#fff"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="200dp"
+            android:layout_height="170dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/image2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:longClickable="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
